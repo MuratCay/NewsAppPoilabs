@@ -21,4 +21,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "NewsAppPoilabs"
 include(":app")
- 
+include(":data")
+include(":database")
+include(":domain")
+include(":presentation")
+include(":remote")
