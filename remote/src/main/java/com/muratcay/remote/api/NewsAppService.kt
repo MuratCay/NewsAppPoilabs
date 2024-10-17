@@ -10,10 +10,10 @@ interface NewsAppService {
     @GET("v2/top-headlines")
     suspend fun getBreakingNews(
         @Query("country")
-        countryCode: String = "tr",
+        countryCode: String = RemoteConstants.COUNTRY_CODE,
         @Query("page")
         pageNumber: Int = 1,
         @Query("apiKey")
-        apiKey: String = RemoteConstants.apiKey
+        apiKey: String = RemoteConstants.API_KEY
     ): NewsResponse
 }
