@@ -6,8 +6,8 @@ import kotlinx.coroutines.flow.Flow
 
 interface NewsRepository {
     //Remote and cache
-    suspend fun getBreakingNews(): Flow<Result<List<Article>>>
-    suspend fun getNews(id: Long): Flow<Result<Article>>
+    suspend fun getNews(): Flow<Result<List<Article>>>
+    suspend fun getNewsById(id: Long): Flow<Result<Article>>
 
     //Cache only
     suspend fun saveArticles(articles: List<Article>)
