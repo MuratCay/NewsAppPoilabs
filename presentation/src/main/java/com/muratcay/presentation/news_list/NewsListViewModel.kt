@@ -7,7 +7,13 @@ import javax.inject.Inject
 @HiltViewModel
 class NewsListViewModel @Inject constructor() : BaseViewModel<NewsListState>() {
 
-    override fun setInitialState(): NewsListState {
-        TODO("Not yet implemented")
+    override fun setInitialState(): NewsListState = NewsListState.Loading
+
+    init {
+        fetchArticles()
+    }
+
+    private fun fetchArticles() {
+
     }
 }
